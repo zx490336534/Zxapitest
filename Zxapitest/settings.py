@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login'
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -66,12 +65,12 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': ['django.templatetags.static'],
         },
     },
 ]
 
 WSGI_APPLICATION = 'Zxapitest.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -79,12 +78,12 @@ WSGI_APPLICATION = 'Zxapitest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        'NAME': 'Zxapitest',                       # 数据库名称
-        'USER': 'zhongxin',                      # 数据库登录用户名
-        'PASSWORD': '123456',                # 密码
-        'HOST': '127.0.0.1',                # 数据库主机IP，如保持默认，则为127.0.0.1
-        'PORT': 3306,                           # 数据库端口号，如保持默认，则为3306
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'Zxapitest',  # 数据库名称
+        'USER': 'zhongxin',  # 数据库登录用户名
+        'PASSWORD': '123456',  # 密码
+        'HOST': '127.0.0.1',  # 数据库主机IP，如保持默认，则为127.0.0.1
+        'PORT': 3306,  # 数据库端口号，如保持默认，则为3306
     }
 }
 
@@ -106,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -120,11 +118,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),	# 用于存放静态文件
+    os.path.join(BASE_DIR, 'static'),  # 用于存放静态文件
 ]

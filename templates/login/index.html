@@ -1,10 +1,12 @@
 {% extends 'login/base.html' %}
-{% load static %}
+{% block title %}
+  登录
+{% endblock %}
 {% block main %}
   <div class="row justify-content-md-center h-100">
     <div class="card-wrapper">
       <div class="brand">
-        <img src={% static 'img/logo.jpg' %}>
+        <img src='../static/img/logo.jpg'>
       </div>
       <div class="card fat">
         <div class="card-body">
@@ -19,7 +21,7 @@
 
             <div class="form-group">
               <label for="password">Password
-                <a href="forgot.html" class="float-right">
+                <a href={% url 'forgot' %} class="float-right">
                   Forgot Password?
                 </a>
               </label>
@@ -38,7 +40,7 @@
               </button>
             </div>
             <div class="margin-top20 text-center">
-              Don't have an account? <a href="register.html">Create One</a>
+              Don't have an account? <a href={% url 'register' %}>Create One</a>
             </div>
           </form>
         </div>
