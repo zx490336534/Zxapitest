@@ -10,19 +10,19 @@
       </div>
       <div class="card fat">
         <div class="card-body">
-          <h4 class="card-title">Login</h4>
+          <h4 class="card-title">登录</h4>
           <form method="POST">
 
             <div class="form-group">
-              <label for="email">E-Mail Address</label>
+              <label for="email">邮箱地址</label>
 
               <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
             </div>
 
             <div class="form-group">
-              <label for="password">Password
+              <label for="password">密码
                 <a href={% url 'forgot' %} class="float-right">
-                  Forgot Password?
+                  忘记密码?
                 </a>
               </label>
               <input id="password" type="password" class="form-control" name="password" required data-eye>
@@ -30,17 +30,17 @@
 
             <div class="form-group">
               <label>
-                <input type="checkbox" name="remember"> Remember Me
+                <input type="checkbox" name="remember"> 记住我
               </label>
             </div>
 
             <div class="form-group no-margin">
               <button type="submit" class="btn btn-primary btn-block">
-                Login
+                登录
               </button>
             </div>
             <div class="margin-top20 text-center">
-              Don't have an account? <a href={% url 'register' %}>Create One</a>
+              没有账号? <a href={% url 'register' %}>注册</a>
             </div>
           </form>
         </div>
