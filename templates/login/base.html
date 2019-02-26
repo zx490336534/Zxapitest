@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Kodinger">
+  <title>
+    {% block title %}
+
+    {% endblock %}
+  </title>
+  <link rel="stylesheet" type="text/css" href={% static 'bootstrap/css/bootstrap.min.css' %}>
+  <link rel="stylesheet" type="text/css" href={% static 'css/my-login.css' %}>
+</head>
+<body class="my-login-page">
+<section class="h-100">
+  <div class="container h-100">
+    {% block main %}
+
+    {% endblock %}
+  </div>
+</section>
+
+<script src={% static "js/jquery.min.js" %}></script>
+<script src={% static "bootstrap/js/bootstrap.min.js" %}></script>
+<script src={% static "js/my-login.js" %}></script>
+</body>
+</html>
