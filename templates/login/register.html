@@ -12,10 +12,11 @@
         <div class="card-body">
           <h4 class="card-title">注册</h4>
           <form method="POST">
+            {% csrf_token %}
 
             <div class="form-group">
               <label for="name">用户名</label>
-              <input id="name" type="text" class="form-control" name="name" required autofocus>
+              <input id="name" type="text" class="form-control" name="username" required autofocus>
             </div>
 
             <div class="form-group">
@@ -26,6 +27,11 @@
             <div class="form-group">
               <label for="password">密码</label>
               <input id="password" type="password" class="form-control" name="password" required data-eye>
+            </div>
+
+            <div class="form-group">
+              <label for="password">再次输入密码</label>
+              <input id="password_repeat" type="password" class="form-control" name="password_repeat" required data-eye>
             </div>
 
             <div class="form-group">
