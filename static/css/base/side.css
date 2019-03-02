@@ -1,0 +1,188 @@
+/* ========= side start ============ */
+#main .side {
+    width: 360px;
+    float: right;
+    background: #fff;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+}
+/* ==== side-activities start ==== */
+.side .side-activities .activities-title {
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+.side .side-activities .activities-title a {
+    font-size: 14px;
+    float: right;
+    color: skyblue;
+}
+.side .side-activities .activities-img {
+    width: 320px;
+    height: 215px;
+    position: relative;
+    margin: 0 20px 20px;
+}
+.side-activities .activities-img img {
+    width: 100%;
+    height: 100%;
+}
+.side-activities .activities-img .activities-tips{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.side-activities .activities-list li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+.activities-list  li .active-status {
+    padding: 2px 4px;
+    margin-right: 14px;
+}
+.activities-list  li .active-start {
+     color: skyblue;
+     border: 1px solid skyblue;
+}
+.activities-list  li .active-end {
+     color: #ddd;
+     border: 1px solid #ddd;
+}
+.side-activities .activities-list  li:hover {
+    background: rgba(204, 204, 204, 0.22);
+}
+/* ==== side-activities end ==== */
+/* ==== side-course start ==== */
+.side .side-course {
+    border-top: 1px solid #ddd;
+    padding: 0 20px 20px;
+}
+.side .side-course .course-title {
+    font-size: 18px;
+    line-height: 60px;
+}
+.side .side-course .course-title a {
+    font-size: 14px;
+    float: right;
+    color: skyblue;
+}
+.side .side-course .course-entry {
+    display: block;
+    width: 315px;
+    height: 176px;
+}
+.side-course .course-entry img {
+    width: 100%;
+}
+/* ==== side-course end ==== */
+/* ==== side-gift start ==== */
+.side .side-gift {
+    display: block;
+    height: 130px;
+}
+/* ==== side-gift end ==== */
+/* ==== side-attention start ==== */
+.side .side-attention {
+    height: 261px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+.side .side-attention .attention-title {
+    font-size: 18px;
+}
+.side-attention .side-attention-address {
+    margin: 10px 15px;
+    float: left;
+}
+.side-attention .side-attention-address li {
+    line-height: 66px;
+}
+.side-attention-address li i {
+    font-size: 40px;
+    vertical-align: -10px;
+    padding-right: 25px;
+}
+.side-attention .side-attention-qr {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    background: url('../../images/wechat.jpg') no-repeat center/100%;
+}
+.side-attention .side-attention-qr p {
+    text-align: center;
+    padding-top: 110px;
+    font-size: 16px;
+    line-height: 32px;
+}
+/* ==== side-attention end ==== */
+/* ==== side-hot-recommend start ==== */
+.side .side-hot-recommend {
+    border-top: 1px solid #ddd;
+    padding: 0 20px;
+}
+.side-hot-recommend .hot-recommend {
+    font-size: 18px;
+    line-height: 60px;
+    color: #212121;
+}
+.side-hot-recommend  .hot-news-list li {
+    border-bottom: 1px solid #ddd;
+}
+.hot-news-list .hot-news-contain {
+    display: block;
+    padding: 20px 0;
+}
+.hot-news-list .hot-news-contain .hot-news-thumbnail {
+    width: 100px;
+    height: 70px;
+    float: right;
+}
+.hot-news-contain .hot-news-thumbnail img {
+    width: 100%;
+}
+.hot-news-contain  .hot-news-content {
+    width: 63%;
+    margin-right: 110px;
+}
+.hot-news-contain  .hot-news-content .hot-news-title {
+    font-size: 16px;
+    color: #212121;
+    line-height: 28px;
+    height: 56px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;/*显示的行数*/
+}
+.hot-news-content .hot-news-other {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.hot-news-content .hot-news-other .news-type {
+    float: left;
+    color: #5b86db;
+    line-height: 14px;
+}
+.hot-news-content .hot-news-other .news-pub-time {
+    float: right;
+}
+.hot-news-content .hot-news-other .news-author {
+    float: right;
+    display: none;
+}
+/* ==== side-hot-recommend end ==== */
+/* ========= side end ============ */

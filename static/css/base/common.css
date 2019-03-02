@@ -1,0 +1,157 @@
+body {
+    background: #e8dede;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    user-select: none;
+}
+.w1200 {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mw1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ================= header start ================= */
+#header {
+    height: 64px;
+    background: #141414;
+    color: #fff;
+    line-height: 64px;
+}
+/* ========= logo start ============ */
+#header .header-contain .logo {
+    width: 235px;
+    height: 64px;
+    float: left;
+}
+.header-contain .logo .logo-title {
+    display: block;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.python.org/static/img/python-logo.png) 0 -8px;
+}
+/* ========= logo end ============ */
+
+/* ========= nav start ============ */
+#header .header-contain .nav {
+    float: left;
+    margin-left: 40px;
+}
+.header-contain .nav .menu {
+    width: 380px;
+    display: flex;
+    justify-content: center;
+
+}
+.nav .menu li {
+    height: 64px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.nav .menu li a{
+    display: block;
+    font-size: 15px;
+}
+.nav .menu li:hover {
+    background: #0e0e0e;
+    border-bottom: 4px solid #a7ca1b;
+}
+.nav .menu li.active {
+    background: #0e0e0e;
+    border-bottom: 4px solid #a7ca1b;
+}
+/* ========= nav end ============ */
+/* ========= login start ============ */
+.header-contain .login-box {
+    float: right;
+}
+.login-box .py-user {
+    font-size: 30px;
+}
+.login-box span{
+    vertical-align: 4px;
+}
+.login-box .login:hover, .reg:hover {
+    text-shadow: 1.5px 1.5px 3px rgba(255, 255, 255, 0.88);
+}
+.login-box .author {
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+
+.login-box .author .author-menu {
+    display: none;
+    width: 120px;
+    position: absolute;
+    top: 64px;
+    left: -15px;
+    background: #fff;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0 1px 2px #ccc;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.login-box .author .author-menu li a {
+    display: block;
+    color: #7493c5;
+}
+
+.login-box .author:hover .author-menu {
+    display: block;
+}
+
+.login-box .author .author-menu li:hover {
+    background: #e4e4e4;
+}
+
+.login-box .author .author-menu::after {
+    content: "";
+    border: 12px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: -24px;
+    left: 50px;
+}
+/* ========= login end ============ */
+/* ================= header end ================= */
+
+/* ================= footer start ================= */
+#footer {
+    background: rgb(83, 94, 103);
+}
+#footer .footer-box {
+    text-align: center;
+    color: #c1c1c1;
+}
+#footer .footer-box .footer-content {
+    height: 120px;
+    line-height: 30px;
+    padding-top: 25px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    background: url(https://www.python.org/static/img/python-logo.png) no-repeat 50px 20px;
+}
+.footer-content .top-content .link {
+    margin-right: 23px;
+}
+.footer-box .footer-content .top-content span.about-me .py-wechat {
+    font-size: 24px;
+    color: #fff;
+    vertical-align: -4px;
+}
+.footer-box .footer-content .bottom-content span:first-child {
+    margin-right: 20px;
+}
+#footer .footer-box .copyright-desc {
+    line-height: 60px;
+    background: rgb(55, 60, 70);
+}
+/* ================= footer end ================= */
