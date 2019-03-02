@@ -12,6 +12,7 @@
         <div class="card-body">
           <h4 class="card-title">登录</h4>
           <form method="POST">
+            {% csrf_token %}
 
             <div class="form-group">
               <label for="email">邮箱地址</label>

@@ -18,6 +18,7 @@ class Code:
     USERERR = "4104"
     ROLEERR = "4105"
     PWDERR = "4106"
+    AGGREE = "4107"
 
     SERVERERR = "4500"
     UNKOWNERR = "4501"
@@ -39,6 +40,7 @@ error_map = {
     Code.USERERR: "用户不存在或未激活",
     Code.ROLEERR: "用户身份错误",
     Code.PWDERR: "密码错误",
+    Code.AGGREE:"未同意协议",
 
     Code.SERVERERR: "内部错误",
     Code.UNKOWNERR: "未知错误",
