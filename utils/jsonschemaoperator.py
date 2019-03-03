@@ -5,6 +5,8 @@
 import json
 import re
 
+import jsonschema
+
 
 class JsonSchemaOperator():
     def __init__(self, json_data):
@@ -48,10 +50,10 @@ class JsonSchemaOperator():
             result.append('}')
         elif isinstance(json_data, str):
             result.append("{")
-            if json_data.upper() in ("TRUE", "FALSE"):
-                result.append("'type': 'boolean'")
-            else:
-                result.append("'type': 'string'")
+            # if json_data.upper() in ("TRUE", "FALSE"):
+            #     result.append("'type': 'boolean'")
+            # else:
+            result.append("'type': 'string'")
             result.append('}')
         return "".join(result)
 
@@ -107,15 +109,16 @@ class JsonSchemaOperator():
             self.testdata = self.to_jsonschema(self.json_data, result)
             self.testdata = json.loads(re.sub('\'', '\"', self.testdata))
             self.complement_required(self.testdata)
-            print(self.testdata)
-            print(json.dumps(self.testdata, indent=4))
+            # print(self.testdata)
+            # print(json.dumps(self.testdata, indent=4))
+            return self.testdata
         except Exception as e:
             print(f'输入的JSON数据有问题, 请检查:{e}')
 
 
 if __name__ == '__main__':
     a = {
-        "checked": "false",
+        "checked": "False",
         "dimensions": {
             "width": 5,
             "height": 10
@@ -131,3 +134,7 @@ if __name__ == '__main__':
     j = JsonSchemaOperator(a)
     j.limit.append(['price', "number", 200, 100, [200, 150, 100], 50])
     j.to_json()
+    v = jsonschema.Draft7Validator(j.testdata)
+    errors = sorted(v.iter_errors(a), key=lambda e: e.path)
+    for e in errors:
+        print(e)
