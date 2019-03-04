@@ -1,5 +1,6 @@
 import json
 import logging
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -22,7 +23,7 @@ class LoginView(View):
             json_data = request.POST
             if not json_data:
                 return to_json_data(errno=Code.PARAMERR, errmsg="参数为空，请重新输入")
-            use_key = [ "email","password", "remember"]
+            use_key = ["email", "password", "remember"]
             dict_data = {}
             for i in use_key:
                 dict_data[i] = request.POST.get(i)
@@ -31,7 +32,7 @@ class LoginView(View):
             return to_json_data(errno=Code.UNKOWNERR, errmsg=error_map[Code.UNKOWNERR])
         form = LoginForm(data=dict_data, request=request)
         if form.is_valid():
-            return render(request,'index/index.html')
+            return redirect(reverse("index"))
         else:
             err_msg_list = []
             for item in form.errors.get_json_data().values():
