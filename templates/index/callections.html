@@ -1,0 +1,53 @@
+{% extends 'index/base.html' %}
+
+
+{% block title %}
+  接口管理平台-接口集管理
+{% endblock %}
+
+{% block content_header %}
+  接口相关
+{% endblock %}
+
+{% block header_option_desc %}
+  接口集管理
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <button class="btn btn-primary pull-right" id="btn-add-tag">新建接口集</button>
+        </div>
+        <div class="box-body">
+          <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+              <th>接口集名称</th>
+              <th>接口数量</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for one_tag in tags %}
+              <tr data-id="{{ one_tag.id }}" data-name="{{ one_tag.name }}">
+                <td>{{ one_tag.name }}</td>
+                <td>{{ one_tag.num_news }}</td>
+                <td>
+                  <button class="btn btn-xs btn-warning btn-edit">编辑</button>
+                  <button class="btn btn-xs btn-danger btn-del">删除</button>
+                </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'js/workspace/callections.js' %}"></script>
+{% endblock %}
