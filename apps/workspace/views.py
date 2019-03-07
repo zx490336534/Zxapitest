@@ -36,3 +36,27 @@ class CallectionsView(View):
                 to_json_data(errno=Code.DATAEXIST, errmsg="接口集名已存在")
         else:
             return to_json_data(errno=Code.PARAMERR, errmsg="接口集名为空")
+
+
+class CallectionsEditView(View):
+    def put(self, request, callections_id):
+        json_data = request.body
+        if not json_data:
+            return to_json_data(errno=Code.PARAMERR, errmsg=error_map[Code.PARAMERR])
+        # 将json转化为dict
+        dict_data = json.loads(json_data.decode('utf8'))
+        tag_name = dict_data.get('name')
+        tag = models.Callections.objects.only('id').filter(id=callections_id).first()
+        if tag:
+            if tag_name and tag_name.strip():
+                if not models.Callections.objects.only('id').filter(name=tag_name).exists():
+                    tag.name = tag_name
+                    tag.save(update_fields=['name'])
+                    return to_json_data(errmsg="接口集更新成功")
+                else:
+                    return to_json_data(errno=Code.DATAEXIST, errmsg="接口集已存在")
+            else:
+                return to_json_data(errno=Code.PARAMERR, errmsg="接口集为空")
+
+        else:
+            return to_json_data(errno=Code.PARAMERR, errmsg="需要更新的接口集不存在")
