@@ -15,7 +15,8 @@ class IndexView(View):
 
 class CallectionsView(View):
     def get(self, request):
-        tags = models.Callections.objects.values('id', 'name')
+        tags = models.Callections.objects.values('id', 'name').\
+            filter(is_delete=False).order_by('update_time')
         return render(request, 'index/callections.html', locals())
 
     def post(self, request):
@@ -60,3 +61,14 @@ class CallectionsEditView(View):
 
         else:
             return to_json_data(errno=Code.PARAMERR, errmsg="需要更新的接口集不存在")
+
+    def delete(self, request, callections_id):
+        tag = models.Callections.objects.only('id').filter(id=callections_id).first()
+        if tag:
+            # 真删
+            # tag.delete()
+            tag.is_delete = True
+            tag.save(update_fields=['is_delete'])
+            return to_json_data(errmsg="标签删除成功")
+        else:
+            return to_json_data(errno=Code.PARAMERR, errmsg="需要删除的标签不存在")
