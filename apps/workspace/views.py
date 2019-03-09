@@ -15,7 +15,7 @@ class IndexView(View):
 
 class CallectionsView(View):
     def get(self, request):
-        tags = models.Callections.objects.values('id', 'name').\
+        tags = models.Callections.objects.values('id', 'name'). \
             filter(is_delete=False).order_by('update_time')
         return render(request, 'index/callections.html', locals())
 
@@ -72,3 +72,8 @@ class CallectionsEditView(View):
             return to_json_data(errmsg="标签删除成功")
         else:
             return to_json_data(errno=Code.PARAMERR, errmsg="需要删除的标签不存在")
+
+
+class ApiAddView(View):
+    def get(self, request):
+        return render(request, 'index/api_add.html')
