@@ -102,26 +102,23 @@
                     <div class="box-body">
 
                       <div class="box-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="head_data">
                           <tbody>
                           <tr>
-                            <th style="width: 40px">操作</th>
+                            <th style="width: 40px">
+                              <a href="javascript:void(0)" id="head_data_add">
+                                <i class="fa fa-fw fa-plus-circle" style="font-size:25px;"></i>
+                              </a>
+                            </th>
                             <th>键</th>
                             <th>值</th>
                             <th style="width: 20px">注释</th>
                           </tr>
                           <tr>
-                            <td><i class="fa fa-fw fa-minus-circle" style="font-size:25px;"></i></td>
+                            <td>1</td>
                             <td><input type="text" placeholder="请输入请求键" style="border-radius: 5px"></td>
                             <td><input type="text" placeholder="请输入请求值" style="border-radius: 5px"></td>
                             <td><input type="text" placeholder="请输入注释" style="border-radius: 5px"></td>
-                          </tr>
-
-                          <tr>
-                            <td><i class="fa fa-fw fa-plus-circle" style="font-size:25px;"></i></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                           </tr>
 
 
@@ -144,27 +141,23 @@
                     <div class="box-body">
 
                       <div class="box-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="resquest_data">
                           <tbody>
                           <tr>
-                            <th style="width: 40px">操作</th>
+                            <th style="width: 40px">
+                              <a href="javascript:void(0)" id="add_new_data">
+                                <i class="fa fa-fw fa-plus-circle" style="font-size:25px;"></i>
+                              </a>
+                            </th>
                             <th>键</th>
                             <th>值</th>
                             <th style="width: 40px">注释</th>
-
                           </tr>
                           <tr>
-                            <td><i class="fa fa-fw fa-minus-circle" style="font-size:25px;"></i></td>
+                            <td>1</td>
                             <td><input type="text" placeholder="请输入请求键" style="border-radius: 5px"></td>
                             <td><input type="text" placeholder="请输入请求值" style="border-radius: 5px"></td>
                             <td><input type="text" placeholder="请输入注释" style="border-radius: 5px"></td>
-                          </tr>
-
-                          <tr>
-                            <td><i class="fa fa-fw fa-plus-circle" style="font-size:25px;"></i></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                           </tr>
                           </tbody>
                         </table>
@@ -228,3 +221,6 @@
   </div>
 {% endblock %}
 
+{% block script %}
+  <script src="/static/js/index/api_add.js"></script>
+{% endblock %}
