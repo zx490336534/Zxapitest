@@ -1,38 +1,39 @@
 {% extends 'login/base.html' %}
 {% block title %}
-  恢复密码
+    恢复密码
 {% endblock %}
 {% block main %}
-  <div class="row justify-content-md-center align-items-center h-100">
-    <div class="card-wrapper">
-      <div class="brand">
-        <img src="/static/img/logo.jpg">
-      </div>
-      <div class="card fat">
-        <div class="card-body">
-          <h4 class="card-title">恢复密码</h4>
-          <form method="POST">
-
-            <div class="form-group">
-              <label for="new-password">新密码</label>
-              <input id="new-password" type="password" class="form-control" name="password" required autofocus
-                     data-eye>
-              <div class="form-text text-muted">
-                确定你的密码是强密码且容易记忆
-              </div>
+    <div class="row justify-content-md-center align-items-center h-100">
+        <div class="card-wrapper">
+            <div class="brand">
+                <img src="/static/img/logo.jpg">
             </div>
+            <div class="card fat">
+                <div class="card-body">
+                    <h4 class="card-title">恢复密码</h4>
+                    <form method="POST">
 
-            <div class="form-group no-margin">
-              <button type="submit" class="btn btn-primary btn-block">
-                恢复密码
-              </button>
+                        <div class="form-group">
+                            <label for="new-password">新密码</label>
+                            <input id="new-password" type="password" class="form-control" name="password" required
+                                   autofocus
+                                   data-eye>
+                            <div class="form-text text-muted">
+                                确定你的密码是强密码且容易记忆
+                            </div>
+                        </div>
+
+                        <div class="form-group no-margin">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                恢复密码
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </form>
+            <div class="footer">
+                Copyright &copy; Your Company 2017
+            </div>
         </div>
-      </div>
-      <div class="footer">
-        Copyright &copy; Your Company 2017
-      </div>
     </div>
-  </div>
 {% endblock %}

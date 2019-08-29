@@ -1,54 +1,55 @@
 {% extends 'login/base.html' %}
 {% block title %}
-  登录
+    登录
 {% endblock %}
 {% block main %}
-  <div class="row justify-content-md-center h-100">
-    <div class="card-wrapper">
-      <div class="brand">
-        <img src='/static/img/logo.jpg'>
-      </div>
-      <div class="card fat">
-        <div class="card-body">
-          <h4 class="card-title">登录</h4>
-          <form method="POST">
-            {% csrf_token %}
-
-            <div class="form-group">
-              <label for="email">邮箱地址</label>
-
-              <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+    <div class="row justify-content-md-center h-100">
+        <div class="card-wrapper">
+            <div class="brand">
+                <img src='/static/img/logo.jpg'>
             </div>
+            <div class="card fat">
+                <div class="card-body">
+                    <h4 class="card-title">登录</h4>
+                    <form method="POST">
+                        {% csrf_token %}
 
-            <div class="form-group">
-              <label for="password">密码
-                <a href={% url 'forgot' %} class="float-right">
-                  忘记密码?
-                </a>
-              </label>
-              <input id="password" type="password" class="form-control" name="password" required data-eye>
-            </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址</label>
 
-            <div class="form-group">
-              <label>
-                <input type="checkbox" name="remember"> 记住我
-              </label>
-            </div>
+                            <input id="email" type="email" class="form-control" name="email" value="" required
+                                   autofocus>
+                        </div>
 
-            <div class="form-group no-margin">
-              <button type="submit" class="btn btn-primary btn-block">
-                登录
-              </button>
+                        <div class="form-group">
+                            <label for="password">密码
+                                <a href={% url 'forgot' %} class="float-right">
+                                    忘记密码?
+                                </a>
+                            </label>
+                            <input id="password" type="password" class="form-control" name="password" required data-eye>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="remember"> 记住我
+                            </label>
+                        </div>
+
+                        <div class="form-group no-margin">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                登录
+                            </button>
+                        </div>
+                        <div class="margin-top20 text-center">
+                            没有账号? <a href={% url 'register' %}>注册</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="margin-top20 text-center">
-              没有账号? <a href={% url 'register' %}>注册</a>
+            <div class="footer">
+                Copyright &copy; Your Company 2017
             </div>
-          </form>
         </div>
-      </div>
-      <div class="footer">
-        Copyright &copy; Your Company 2017
-      </div>
     </div>
-  </div>
 {% endblock %}
